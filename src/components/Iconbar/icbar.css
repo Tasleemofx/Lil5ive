@@ -1,0 +1,43 @@
+
+.ic-bar{
+    display: none;
+}
+
+
+
+@media screen and (min-width: 768px){
+.ic-bar{
+    display: block;
+    height: 100vh;
+    width: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background-color: var(--logobackground);
+}
+
+.ic-bar ul{
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+}
+
+.ic-bar ul li{
+    list-style-type: none;
+    padding: 1em;
+}
+.ic-bar ul li svg{
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    color: white;
+    margin: 1em auto;
+    font-size: 1.5em;
+
+    
+}
+
+.playn-btn{
+    color: #FF0000;
+}
+}

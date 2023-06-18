@@ -1,0 +1,89 @@
+@keyframes slidein {
+    0%{
+        width: 20vw;
+    }
+    100%{
+        width: 70vw;
+    }
+
+}
+
+
+.sdbar{
+    background: var(--lightblack);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(50px);
+    height: 100vh;
+    width: 70vw;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    font-family: Tw Cen MT;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 2px;
+    text-align: center;
+    animation: slidein 1.5s 0s normal;
+}
+.pglist{
+    color: var(--white);
+
+
+}
+.pglist li{
+    list-style-type: none;
+    margin: 1em 0;
+}
+.iconlist{
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+
+}
+
+.iconlist li{
+    list-style-type: none;
+    margin: 1em;
+}
+
+
+.playn-btn{
+    color: #FF0000;
+}
+
+
+@media screen and (min-width: 768px){
+
+    @keyframes slidein {
+            0% {
+                width: 5vw;
+            }
+    
+            100% {
+                width: 35vw;
+            }
+    
+        }
+.sb-lg{
+    display: none;
+}
+.sdbar {
+    width: 35vw;
+    animation: slidein 1s 0s normal;
+    font-family: Tw Cen MT;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+    z-index: 1;
+}
+.iconlist li {
+    margin: 0.5em;
+}
+}
