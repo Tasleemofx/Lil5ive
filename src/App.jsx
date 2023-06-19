@@ -38,7 +38,7 @@ function App() {
     let duration = songRef.current.duration
     let ct = songRef.current.currentTime
     
-    
+   
     setProgress( (ct/duration) * 100)
     
   }

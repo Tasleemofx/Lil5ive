@@ -29,6 +29,7 @@
     letter-spacing: 2px;
     text-align: center;
     animation: slidein 1.5s 0s normal;
+    z-index: 1;
 }
 .pglist{
     color: var(--white);
