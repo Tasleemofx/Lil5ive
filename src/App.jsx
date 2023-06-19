@@ -7,19 +7,21 @@ import lil5ive from "./assets/images/5ive.png"
 import lil5ivesm from "./assets/images/5ive-sm.png"
 import playwhite from "./assets/images/playwhite.png"
 import playgrey from "./assets/images/playgrey.png"
+import pause from "./assets/images/pause.jpg"
 import say from "./assets/music/saybelieve.mp3"
 import amoeba from './assets/images/amoeba.png'
 import lil5text from "./assets/images/htxt.png"
 import ellipse from "./assets/images/Ellipse.png"
 import ellipse2 from "./assets/images/Ellipse-4.png"
+import {  BsPlayBtnFill } from 'react-icons/bs'
 import "./App.css"
 
-import { BsPauseCircle, BsPlayCircle } from 'react-icons/bs'
+
 
 function App() {
   const [opensidebar, setOpensidebar] = useState(false)
   const [isplaying, setIsplaying] = useState(false)
-  const [progress, setProgress] = useState(0)
+  const [progress, setProgress] = useState(1)
   const [song, setSong] = useState(say)
 
   const progressRef = useRef()
@@ -27,14 +29,17 @@ function App() {
   const controlRef = useRef()
 
 
-  useEffect(()=>{
-    setTimeout(()=>{
-      progress = song.value
-    },500)
-  },[songRef.current])
+  // useEffect(()=>{
+  //   setTimeout(()=>{
+  //     progress = song.value
+  //   },500)
+  // },[songRef.current])
   function getMusic(){
-    songRef.current.max = progress
-  
+    let duration = songRef.current.duration
+    let ct = songRef.current.currentTime
+    
+    
+    setProgress( (ct/duration) * 100)
     
   }
   function playPause(){
@@ -66,15 +71,19 @@ function App() {
       <img src={lil5text} alt="bgtxt" className="wmarktxt"/>
       <img src={ellipse2} alt="semi-circle" className="btm-rgt"/>
       <img src={amoeba} alt="amoeba" className="amoeba" />
-      <audio src={say} type="audio/mp3" ref={songRef} >
+      <audio src={say} type="audio/mp3" ref={songRef} onTimeUpdate={getMusic}>
         Your browser cannot play this audio
       </audio>
-      <div className="fcol jsb-aic playern" >
-      {isplaying ?  <BsPauseCircle onClick={playPause}/>: <BsPlayCircle onClick={playPause}/> }
-
-      <input type="range" ref={progressRef} defaultValue={progress} 
-      onChange={(e)=> console.log(e.target.value)} className="audioprog"/>
+      <div className="player">
+        <div className="playerbtn" onClick={playPause}>
+        {isplaying ? <img src={pause} alt="pause"/>: <img src={playwhite} alt="play"/> }
+        </div>
+        <div className="audioprog">
+          <div style={{left: `${progress}%`}} className="seeker"></div>
+        </div>
       </div>
+
+     
     </div>
   )
 }
