@@ -24,7 +24,7 @@ function App() {
   const [progress, setProgress] = useState(1)
   const [song, setSong] = useState(say)
 
-  const progressRef = useRef()
+
   const songRef = useRef()
   const controlRef = useRef()
 
