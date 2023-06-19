@@ -64,6 +64,7 @@ font-family: Tw Cen MT;
  
  .playerbtn{
   border: 2px solid var(--white);
+  background: var(--black);
   width: max-content;
   height: max-content;
   padding: 1em 1.5em;

@@ -13,7 +13,7 @@ import amoeba from './assets/images/amoeba.png'
 import lil5text from "./assets/images/htxt.png"
 import ellipse from "./assets/images/Ellipse.png"
 import ellipse2 from "./assets/images/Ellipse-4.png"
-import happy from "./assets/images/happy.png"
+import happy from "./assets/images/Happy.png"
 import "./App.css"
 
 
@@ -75,7 +75,7 @@ function App() {
         <p className="smtx">OUT NOW ON ALL PLATFORMS</p>
         <img src={happy} alt="happy" className="happytx"/>
       </div>
-      <audio src={say} type="audio/mp3" ref={songRef} onTimeUpdate={getMusic}>
+      <audio src={song} type="audio/mp3" ref={songRef} onTimeUpdate={getMusic}>
         Your browser cannot play this audio
       </audio>
       <div className="player">
