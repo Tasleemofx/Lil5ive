@@ -29,7 +29,7 @@
     letter-spacing: 2px;
     text-align: center;
     animation: slidein 1.5s 0s normal;
-    z-index: 1;
+    z-index: 20;
 }
 .pglist{
     color: var(--white);
@@ -82,7 +82,7 @@
     line-height: 39px;
     letter-spacing: 0em;
     text-align: center;
-    z-index: 1;
+    z-index: 10;
 }
 .iconlist li {
     margin: 0.5em;

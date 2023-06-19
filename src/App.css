@@ -23,12 +23,40 @@
  .amoeba {
   display: none
  }
+.txtm{
+  position: absolute;
+  top: 20em;
+  left: 10%;
+  color: var(--white)
+}
 
+.gianttx{
+
+font-family: Tw Cen MT;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.smtx{
+  font-family: Tw Cen MT;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.27em;
+    text-align: left;
+}
+
+.happytx{
+  width: 30vw;
+  height: 20vh;
+}
  .player{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  z-index: 3;
+  z-index: 5;
   position: absolute;
   bottom: 4em;
   left: 10%;
@@ -41,6 +69,7 @@
   padding: 1em 1.5em;
   border-radius: 50%;
   position: relative;
+  margin: 1em auto;
  }
  .playerbtn img{
   width: 3em;
@@ -48,23 +77,31 @@
   background: var(--black);
  }
  .audioprog{
-  background: var(--white);
-  border: 1px solid var(--black);
-  border-radius: 4px;
+  background: var(--light-black);
+  /* border: 1px solid var(--black);
+  border-radius: 4px; */
   width: 80vw;
-  height: 50px;
+  height: 20vh;
   margin: 1em auto;
   cursor: pointer;
   position: relative;
+}
+.lenseek{
+  background: var(--white);
+  width: 80vw;
+  height: 5px;
+  position: absolute;
+  top: 1.5em;
 }
 .seeker{
   width: 50px;
   height: 50px;
   border: 5px solid var(--white);
   border-radius: 50%;
-  background: var(--lightblack);
+  background: var(--black);
   position: absolute;
-  top: 0;
+  top: 0em;
+  z-index: 2;
 }
 
 
@@ -101,6 +138,37 @@
       width: 70vw;
       height: 100vh;
       overflow: hidden;
+    }
+
+    .txtm {
+      position: absolute;
+      top:10em;
+      left: 30%;
+      color: var(--white)
+    }
+
+    .gianttx {
+
+      font-family: Tw Cen MT;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 33px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .smtx {
+      font-family: Tw Cen MT;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0.27em;
+      text-align: left;
+    }
+
+    .happytx {
+      width: 15em;
+      height: 8em;
     }
     .pgr{
       position: relative;

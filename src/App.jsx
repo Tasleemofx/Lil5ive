@@ -13,7 +13,7 @@ import amoeba from './assets/images/amoeba.png'
 import lil5text from "./assets/images/htxt.png"
 import ellipse from "./assets/images/Ellipse.png"
 import ellipse2 from "./assets/images/Ellipse-4.png"
-import {  BsPlayBtnFill } from 'react-icons/bs'
+import happy from "./assets/images/happy.png"
 import "./App.css"
 
 
@@ -29,11 +29,9 @@ function App() {
   const controlRef = useRef()
 
 
-  // useEffect(()=>{
-  //   setTimeout(()=>{
-  //     progress = song.value
-  //   },500)
-  // },[songRef.current])
+ function handleseek(){
+  // let clickarea = 
+ }
   function getMusic(){
     let duration = songRef.current.duration
     let ct = songRef.current.currentTime
@@ -71,6 +69,12 @@ function App() {
       <img src={lil5text} alt="bgtxt" className="wmarktxt"/>
       <img src={ellipse2} alt="semi-circle" className="btm-rgt"/>
       <img src={amoeba} alt="amoeba" className="amoeba" />
+
+      <div className="txtm">
+        <p className="gianttx">NEW SINGLE</p>
+        <p className="smtx">OUT NOW ON ALL PLATFORMS</p>
+        <img src={happy} alt="happy" className="happytx"/>
+      </div>
       <audio src={say} type="audio/mp3" ref={songRef} onTimeUpdate={getMusic}>
         Your browser cannot play this audio
       </audio>
@@ -78,7 +82,8 @@ function App() {
         <div className="playerbtn" onClick={playPause}>
         {isplaying ? <img src={pause} alt="pause"/>: <img src={playwhite} alt="play"/> }
         </div>
-        <div className="audioprog">
+        <div className="audioprog" >
+          <div onClick={handleseek} className="lenseek"></div>
           <div style={{left: `${progress}%`}} className="seeker"></div>
         </div>
       </div>

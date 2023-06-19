@@ -2,12 +2,13 @@
     display: flex;
     color: var(--white);
     padding-top: 1em;
- 
+    z-index: 1000;
 }
 .ics svg{
     font-size: 2em;
     font-weight: 1000;
     margin-left: 1em;
+    
 }
 
 @media screen and (min-width: 768px){
