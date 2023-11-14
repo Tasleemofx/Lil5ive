@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import './App.css'
 import Nav from './components/Navbar/Nav'
 import Sidebar from './components/Sidebar/Sidebar'
@@ -26,11 +26,11 @@ function App() {
 
 
   const songRef = useRef()
-  const controlRef = useRef()
+  // const controlRef = useRef()
 
 
- function handleseek(){
-  // let clickarea = 
+ function handleseek(e){
+  console.log(e.target.value)
  }
   function getMusic(){
     let duration = songRef.current.duration
@@ -83,8 +83,8 @@ function App() {
         {isplaying ? <img src={pause} alt="pause"/>: <img src={playwhite} alt="play"/> }
         </div>
         <div className="audioprog" >
-          <div onClick={handleseek} className="lenseek"></div>
-          <div style={{left: `${progress}%`}} className="seeker"></div>
+          <div onClick={(e)=>handleseek(e)} className="lenseek"></div>
+          <div style={{left: `${progress}%`}} className="seeker" ></div>
         </div>
       </div>
 
